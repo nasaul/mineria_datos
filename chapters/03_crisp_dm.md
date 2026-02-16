@@ -1,8 +1,9 @@
-# Capítulo 2: Metodología CRISP-DM para Proyectos de Minería de Datos
+# Metodología CRISP-DM
 
 ## Objetivos de Aprendizaje
 
 Al finalizar este capítulo, serás capaz de:
+
 - Comprender la importancia de una metodología estándar en proyectos de ciencia de datos
 - Identificar y aplicar las seis fases del modelo CRISP-DM
 - Reconocer la naturaleza iterativa y no lineal de los proyectos de datos
@@ -11,9 +12,9 @@ Al finalizar este capítulo, serás capaz de:
 
 ---
 
-## 1. Introducción: La Necesidad de una Metodología Estándar
+## Introducción: La Necesidad de una Metodología Estándar
 
-### 1.1 El Problema de la Fragmentación
+### El Problema de la Fragmentación
 
 Antes de la llegada de CRISP-DM a finales de los años 90, la minería de datos era un campo caótico. Las organizaciones abordaban los problemas analíticos de manera *ad hoc*, dependiendo excesivamente de la intuición de expertos individuales. Esta falta de estandarización resultaba en:
 
@@ -22,9 +23,9 @@ Antes de la llegada de CRISP-DM a finales de los años 90, la minería de datos 
 - **Costos excesivos**: Sin un proceso claro, los equipos repetían errores conocidos
 - **Falta de comunicación**: Los técnicos y los ejecutivos "hablaban lenguajes diferentes"
 
-### 1.2 ¿Qué es CRISP-DM?
+### ¿Qué es CRISP-DM?
 
-**CRISP-DM** (*Cross-Industry Standard Process for Data Mining*) es el proceso estándar de la industria cruzada para la minería de datos. Desarrollado en 1999 por un consorcio que incluía a DaimlerChrysler, SPSS, NCR y OHRA, fue diseñado para ser:
+**CRISP-DM** (*Cross-Industry Standard Process for Data Mining*) es el proceso estándar de la industria cruzada para la minería de datos. Fue diseñado para ser:
 
 - **Agnóstico a la industria**: Aplicable en retail, banca, telecomunicaciones, salud, etc.
 - **Independiente de herramientas**: Funciona con Python, R, SAS, o cualquier stack tecnológico
@@ -33,31 +34,31 @@ Antes de la llegada de CRISP-DM a finales de los años 90, la minería de datos 
 
 ---
 
-## 2. Las Seis Fases de CRISP-DM
+## Las Seis Fases de CRISP-DM
 
 El modelo se estructura en **seis fases interconectadas**. Es fundamental entender que aunque se presentan secuencialmente, la dinámica real es **cíclica y bidireccional**.
 
 ```
 ┌─────────────────────────────────────────────────────┐
 │                                                     │
-│  1. Entendimiento del Negocio                      │
-│     ↓ ↑                                            │
-│  2. Entendimiento de los Datos                     │
-│     ↓ ↑                                            │
-│  3. Preparación de los Datos (60-80% del tiempo)   │
-│     ↓ ↑                                            │
+│  1. Entendimiento del Negocio                       │
+│     ↓ ↑                                             │
+│  2. Entendimiento de los Datos                      │
+│     ↓ ↑                                             │
+│  3. Preparación de los Datos (60-80% del tiempo)    │
+│     ↓ ↑                                             │
 │  4. Modelado                                        │
-│     ↓ ↑                                            │
+│     ↓ ↑                                             │
 │  5. Evaluación                                      │
-│     ↓ ↑                                            │
+│     ↓ ↑                                             │
 │  6. Despliegue                                      │
 │     ↓                                               │
-│  [Retorno a cualquier fase según necesidad]        │
+│  [Retorno a cualquier fase según necesidad]         │
 │                                                     │
 └─────────────────────────────────────────────────────┘
 ```
 
-### 2.1 Fase 1: Entendimiento del Negocio
+### Fase 1: Entendimiento del Negocio
 
 **Esta es la fase más crítica y diferenciadora de CRISP-DM.**
 
@@ -86,7 +87,7 @@ El modelo se estructura en **seis fases interconectadas**. Es fundamental entend
 
 ---
 
-### 2.2 Fase 2: Entendimiento de los Datos
+### Fase 2: Entendimiento de los Datos
 
 Esta fase actúa como un **filtro de viabilidad técnica**. No importa qué tan brillante sea la idea de negocio si los datos necesarios no existen o son de mala calidad.
 
@@ -116,7 +117,7 @@ Esta fase actúa como un **filtro de viabilidad técnica**. No importa qué tan 
 
 ---
 
-### 2.3 Fase 3: Preparación de los Datos
+### Fase 3: Preparación de los Datos
 
 **Esta es la fase más costosa en tiempo**, consumiendo típicamente entre el 60-80% del esfuerzo total del proyecto. Los algoritmos no consumen datos crudos; requieren vectores matemáticos estructurados y limpios.
 
@@ -135,8 +136,9 @@ Esta fase actúa como un **filtro de viabilidad técnica**. No importa qué tan 
 
 3. **Ingeniería de Características (*Feature Engineering*)**
    - Crear nuevas variables que aporten poder predictivo
-   - **Ejemplo bancario**: Transformar "fecha de transacción" en "días desde la última transacción"
-   - **Ejemplo retail**: Crear "ratio de compras festivas vs. normales"
+   - Ejemplos:
+      - **Ejemplo bancario**: Transformar "fecha de transacción" en "días desde la última transacción"
+      - **Ejemplo retail**: Crear "ratio de compras festivas vs. normales"
 
 4. **Transformaciones Técnicas**
    - **Normalización/Escalado**: Llevar valores a escala común (0-1 o media 0 y desviación 1)
@@ -157,7 +159,7 @@ Esta fase actúa como un **filtro de viabilidad técnica**. No importa qué tan 
 
 ---
 
-### 2.4 Fase 4: Modelado
+### Fase 4: Modelado
 
 Es el núcleo computacional donde se aplican los **algoritmos de machine learning**.
 
@@ -165,9 +167,9 @@ Es el núcleo computacional donde se aplican los **algoritmos de machine learnin
 
 1. **Selección de Técnicas**
    - Basada en el tipo de problema:
-     - **Regresión**: Predecir valores continuos (precio, ventas, temperatura)
-     - **Clasificación**: Predecir categorías (fraude/no fraude, churn/no churn)
-     - **Clusterización**: Descubrir grupos naturales (segmentación de clientes)
+     - **Regresión**: Predecir valores continuos
+     - **Clasificación**: Predecir categorías
+     - **Clusterización**: Descubrir grupos naturales 
    - Consideración de restricciones (interpretabilidad, velocidad)
 
 2. **Diseño de la Prueba**
@@ -177,17 +179,10 @@ Es el núcleo computacional donde se aplican los **algoritmos de machine learnin
    - **Validación cruzada** (*k-fold*): Estrategia robusta para evitar sobreajuste
 
 3. **Construcción del Modelo**
+   - Ajustar un modelo base
    - Entrenar múltiples algoritmos (comparación)
    - Ajustar hiperparámetros (tuning)
    - Evaluar métricas técnicas
-
-#### Técnicas Comunes por Tipo de Problema
-
-| Tipo | Algoritmos Típicos | Métricas de Evaluación |
-|------|-------------------|------------------------|
-| **Regresión** | Regresión Lineal, Random Forest, XGBoost, Gradient Boosting | MAE, RMSE, R², MAPE |
-| **Clasificación** | Regresión Logística, Random Forest, SVM, Redes Neuronales | Accuracy, Precision, Recall, F1-Score, AUC-ROC |
-| **Clusterización** | K-Means, DBSCAN, Clustering Jerárquico | Silhouette Score, Davies-Bouldin Index, Elbow Method |
 
 #### Entregables Clave
 - Modelos entrenados y serializados
@@ -197,7 +192,7 @@ Es el núcleo computacional donde se aplican los **algoritmos de machine learnin
 
 ---
 
-### 2.5 Fase 5: Evaluación
+### Evaluación
 
 A diferencia de la evaluación técnica dentro del modelado, esta fase revisa el modelo desde la **óptica del negocio**.
 
@@ -210,7 +205,7 @@ A diferencia de la evaluación técnica dentro del modelado, esta fase revisa el
 
 2. **Revisión del Proceso**
    - Auditoría de calidad metodológica
-   - Verificación de que no hubo *data leakage* (filtración de información del futuro)
+   - Verificación de que no hubo *data leakage*
    - Revisión ética: ¿El modelo perpetúa sesgos injustos?
 
 3. **Decisión de Despliegue**
@@ -232,7 +227,7 @@ A diferencia de la evaluación técnica dentro del modelado, esta fase revisa el
 
 ---
 
-### 2.6 Fase 6: Despliegue
+### Fase 6: Despliegue
 
 La inteligencia generada debe **operacionalizarse** e integrarse en los procesos diarios de la organización.
 
@@ -268,9 +263,9 @@ La inteligencia generada debe **operacionalizarse** e integrarse en los procesos
 
 ---
 
-## 3. Casos de Estudio: CRISP-DM en Acción
+## Casos de Estudio: CRISP-DM en Acción
 
-### 3.1 Caso de Regresión: Predicción de Ventas en Walmart
+### Caso de Regresión: Predicción de Ventas en Walmart
 
 #### Contexto de Negocio
 Walmart opera más de 10,000 tiendas globalmente y enfrenta el desafío de gestionar inventarios para miles de productos. El sub-stock genera ventas perdidas, mientras que el sobre-stock incrementa costos de almacenamiento.
@@ -278,29 +273,34 @@ Walmart opera más de 10,000 tiendas globalmente y enfrenta el desafío de gesti
 #### Aplicación de CRISP-DM
 
 **1. Entendimiento del Negocio**
+
 - **Objetivo**: Desarrollar un sistema de pronóstico de ventas semanales por departamento y tienda
 - **Criterio de éxito**: Minimizar el Error Medio Absoluto Ponderado (WMAE), dando mayor peso a semanas festivas
 
 **2. Entendimiento de Datos**
+
 - Registros históricos 2010-2012 de 45 tiendas
 - Variables: Store, Dept, Weekly_Sales, IsHoliday, CPI, Desempleo, Temperatura, Fuel_Price
 
 **3. Preparación de Datos**
+
 - Tratamiento de valores negativos (devoluciones)
 - Ingeniería de características: variables de retraso (ventas del año anterior)
 - Transformación de festivos en variables categóricas específicas
 
 **4. Modelado**
+
 - Comparación: Random Forest vs. XGBoost vs. ARIMA
-- **Ganador**: Random Forest por su capacidad de capturar interacciones complejas
 
 **5. Evaluación**
+
 - WMAE significativamente reducido vs. promedios históricos
 - Insight: Tamaño de tienda y departamento son predictores principales
 - El precio del combustible tuvo menor impacto del esperado
 
 **6. Despliegue**
-- Dashboard analítico en tiempo real (React.js + Node.js + Python)
+
+- Dashboard analítico en tiempo real 
 - Integración con sistemas de reabastecimiento automático
 - APIs para automatizar órdenes de compra
 
@@ -311,7 +311,7 @@ Walmart opera más de 10,000 tiendas globalmente y enfrenta el desafío de gesti
 
 ---
 
-### 3.2 Caso de Clasificación: Detección de Fraude en Tarjetas de Crédito
+### Caso de Clasificación: Detección de Fraude en Tarjetas de Crédito
 
 #### Contexto de Negocio
 El fraude financiero representa una amenaza existencial para la confianza bancaria. Solo el 0.17% de transacciones son fraudulentas (extremo desequilibrio de clases).
@@ -319,32 +319,38 @@ El fraude financiero representa una amenaza existencial para la confianza bancar
 #### Aplicación de CRISP-DM
 
 **1. Entendimiento del Negocio**
+
 - **Objetivo**: Identificar transacciones fraudulentas en tiempo real
 - **Costos asimétricos**:
   - Falso positivo: Frustración del cliente
   - Falso negativo: Pérdida financiera directa
 
 **2. Entendimiento de Datos**
+
 - 284,807 transacciones, 492 fraudulentas (0.17%)
 - Variables V1-V28 (componentes principales anonimizados por privacidad)
 - Variables interpretables: Tiempo, Monto
 
 **3. Preparación de Datos**
+
 - Ingeniería: Extracción de "hora del día" para patrones circadianos
 - Muestreo estratificado para mantener proporción de fraude
 - Técnica SMOTE para balancear clases en entrenamiento
 
 **4. Modelado**
+
 - Comparación: Regresión Logística vs. Random Forest
 - **Resultados**:
   - Random Forest: Precision 96.52%, Recall 75%, F1-Score 84.41%
   - Regresión Logística: Precision 84.76%, Recall 60.14%, F1-Score 70.36%
 
 **5. Evaluación**
+
 - Análisis costo-beneficio: $11,500 en pérdidas prevenidas (solo en conjunto de prueba)
 - 25% de fraudes no detectados = riesgo residual a gestionar
 
 **6. Despliegue**
+
 - Modelo con latencia <100ms (requisito de tiempo real)
 - Implementación de SHAP para explicabilidad
 - Integración con equipo de analistas de fraude
@@ -356,27 +362,32 @@ El fraude financiero representa una amenaza existencial para la confianza bancar
 
 ---
 
-### 3.3 Caso de Clusterización: Segmentación de Clientes Bancarios
+### Caso de Clusterización: Segmentación de Clientes Bancarios
 
 #### Contexto de Negocio
+
 Bank Rakyat Indonesia (BRI) utiliza un Sistema de Gestión de Efectivo (CMS) para 2,727 empresas. Necesitan segmentar clientes para diseñar estrategias de servicio y marketing diferenciadas.
 
 #### Aplicación de CRISP-DM
 
 **1. Entendimiento del Negocio**
+
 - **Objetivo**: Agrupar usuarios de CMS para personalizar servicio
 - **Problema**: Muchas transacciones fuera de horario laboral dificultan el soporte
 
 **2. Entendimiento de Datos**
+
 - Registros transaccionales enero 2021 - abril 2022
 - Limpieza de anomalías
 - Variables: Volumen de transacciones (monto) y Frecuencia (número de operaciones)
 
 **3. Preparación de Datos**
+
 - Normalización de variables para eliminar sesgos de magnitud
 - Selección de características relevantes para segmentación
 
 **4. Modelado**
+
 - Algoritmo: **K-Means Clustering**
 - Método del Codo (Elbow Method): K=3 óptimo
 - **Resultados**:
@@ -385,10 +396,12 @@ Bank Rakyat Indonesia (BRI) utiliza un Sistema de Gestión de Efectivo (CMS) par
   - Cluster 2 (Intermedio): 220 empresas - En crecimiento
 
 **5. Evaluación**
+
 - Validación técnica: Índice Davies-Bouldin
 - Validación de negocio: Los clusters permiten acciones concretas diferenciadas
 
 **6. Despliegue**
+
 - Perfiles cargados en CRM
 - Estrategias por cluster:
   - Élite: Gerentes dedicados, soporte 24/7
@@ -402,30 +415,33 @@ Bank Rakyat Indonesia (BRI) utiliza un Sistema de Gestión de Efectivo (CMS) par
 
 ---
 
-## 4. Naturaleza Iterativa: El Secreto del Éxito en CRISP-DM
+## Naturaleza Iterativa: El Secreto del Éxito en CRISP-DM
 
-### 4.1 Por Qué la Iteración es Esencial
+### ¿Por Qué la Iteración es Esencial?
 
 CRISP-DM **NO es un proceso lineal tipo cascada**. Los descubrimientos en una fase posterior frecuentemente requieren regresar a fases anteriores:
 
 #### Ejemplos de Flujos Iterativos
 
 **Ejemplo 1: Del Modelado a la Preparación**
+
 - Descubres que el modelo tiene bajo rendimiento
-- Regresas a Preparación de Datos para crear nuevas características
+- Regresas a **Preparación de Datos** para crear nuevas características
 - Vuelves a entrenar y evaluar
 
 **Ejemplo 2: De Evaluación a Entendimiento del Negocio**
+
 - El modelo es técnicamente preciso pero comercialmente inútil
 - Regresas a redefinir el problema de negocio
 - Ajustas los objetivos y reiniciar el ciclo
 
 **Ejemplo 3: Del Despliegue a Modelado**
+
 - El modelo se degrada en producción (data drift)
 - Regresas a reentrenar con datos más recientes
 - Ajustas el algoritmo o características
 
-### 4.2 Principios de la Iteración Efectiva
+### Principios de la Iteración Efectiva
 
 1. **Fallar rápido y aprender**: Mejor descubrir problemas temprano
 2. **Documentar decisiones**: Cada iteración debe ser trazable
@@ -434,30 +450,33 @@ CRISP-DM **NO es un proceso lineal tipo cascada**. Los descubrimientos en una fa
 
 ---
 
-## 5. Desafíos Contemporáneos en la Aplicación de CRISP-DM
+## Desafíos Contemporáneos en la Aplicación de CRISP-DM
 
-### 5.1 Integración con Metodologías Ágiles
+### Integración con Metodologías Ágiles
 
 CRISP-DM se desarrolló en la era de desarrollo en cascada. Hoy, las organizaciones operan en modo Ágil (Scrum, Kanban).
 
 **Solución**:
+
 - Sprints de 2 semanas dentro de fases de CRISP-DM
 - No esperar el "modelo perfecto"
 - Desplegar un MVP (Producto Mínimo Viable) e iterar
 
-### 5.2 Ética y Gobernanza de la IA
+### Ética y Gobernanza de la IA
 
 Los modelos pueden perpetuar sesgos históricos:
+
 - Precios inmobiliarios sesgados por código postal
 - Sistemas de crédito discriminatorios
 - Contratación automatizada con prejuicios de género
 
 **Requerimientos**:
+
 - Auditorías de equidad (*fairness*) en la fase de Evaluación
 - Cumplimiento con GDPR y regulaciones de privacidad
 - Transparencia en el uso de datos
 
-### 5.3 Explicabilidad (XAI - Explainable AI)
+### Explicabilidad (XAI - Explainable AI)
 
 Los modelos complejos (Deep Learning, Ensemble Methods) son "cajas negras". En sectores regulados (banca, salud), se requiere:
 
@@ -465,7 +484,7 @@ Los modelos complejos (Deep Learning, Ensemble Methods) son "cajas negras". En s
 - **LIME** (Local Interpretable Model-agnostic Explanations): Aproximaciones interpretables locales
 - **Derecho a explicación**: Regulaciones que exigen justificar decisiones automatizadas
 
-### 5.4 MLOps: La Evolución del Despliegue
+### MLOps: La Evolución del Despliegue
 
 El despliegue moderno requiere prácticas de DevOps aplicadas a ML:
 
@@ -476,7 +495,7 @@ El despliegue moderno requiere prácticas de DevOps aplicadas a ML:
 
 ---
 
-## 6. Comparación con Otras Metodologías
+## Comparación con Otras Metodologías
 
 | Aspecto | CRISP-DM | KDD | SEMMA (SAS) | TDSP (Microsoft) |
 |---------|----------|-----|-------------|------------------|
@@ -487,6 +506,7 @@ El despliegue moderno requiere prácticas de DevOps aplicadas a ML:
 | **Fase distintiva** | Entendimiento Negocio | Discovery | Sample | Adquisición Cliente |
 
 **Por qué CRISP-DM sigue siendo líder:**
+
 - Independiente de herramientas y plataformas
 - Balance entre rigor técnico y valor de negocio
 - Amplia adopción y documentación
@@ -494,55 +514,64 @@ El despliegue moderno requiere prácticas de DevOps aplicadas a ML:
 
 ---
 
-## 7. Mejores Prácticas y Lecciones Aprendidas
+## Mejores Prácticas y Lecciones Aprendidas
 
-### 7.1 Entendimiento del Negocio
+### Entendimiento del Negocio
 ✅ **Hacer**:
+
 - Invertir tiempo suficiente (no apresurarse al código)
 - Definir criterios de éxito cuantitativos y medibles
 - Involucrar a stakeholders reales, no solo intermediarios
 
 ❌ **Evitar**:
+
 - Asumir que entiendes el problema sin validar
 - Definir objetivos técnicos sin conexión con KPIs de negocio
 - Ignorar restricciones operativas y legales
 
-### 7.2 Preparación de Datos
+### Preparación de Datos
 ✅ **Hacer**:
+
 - Documentar cada transformación con código reproducible
 - Validar la calidad de datos con el equipo de negocio
 - Crear pipelines automatizados de limpieza
 
 ❌ **Evitar**:
+
 - Eliminar datos sin entender su significado
 - Transformar variables sin justificación teórica
 - Crear "data leakage" usando información del futuro
 
-### 7.3 Modelado
+### Modelado
 ✅ **Hacer**:
+
 - Comenzar con modelos simples (baseline)
 - Comparar múltiples algoritmos objetivamente
-- Usar validación cruzada siempre
+- Usar validación cruzada (casi) siempre 
 
 ❌ **Evitar**:
+
 - Elegir algoritmos "porque están de moda"
 - Sobreajustar hiperparámetros al conjunto de prueba
 - Ignorar el trade-off interpretabilidad vs. precisión
 
-### 7.4 Despliegue
+### Despliegue
+
 ✅ **Hacer**:
+
 - Diseñar para degradación (el modelo fallará eventualmente)
 - Implementar monitoreo desde el día 1
 - Planificar reentrenamiento periódico
 
 ❌ **Evitar**:
+
 - "Lanzar y olvidar" sin monitoreo
 - Ignorar latencia y restricciones de producción
 - No tener plan de rollback si el modelo falla
 
 ---
 
-## 8. Ejercicios y Actividades de Aprendizaje
+## Ejercicios y Actividades de Aprendizaje
 
 ### Ejercicio 1: Mapeo de Problemas a Fases de CRISP-DM
 Clasifica las siguientes actividades en su fase correspondiente:
@@ -560,12 +589,13 @@ h) Entrenar un Random Forest con 100 árboles
 Una tienda en línea quiere reducir el abandono de carritos de compra.
 
 **Tareas**:
+
 1. Define el objetivo de negocio en términos cuantitativos
 2. Traduce el objetivo a un problema de minería de datos (tipo de problema)
 3. Lista 5 variables que podrían ser relevantes
 4. Propón 2 transformaciones de ingeniería de características
-5. Sugiere 2 algoritmos candidatos y justifica
-6. Define 2 métricas de evaluación (una técnica, una de negocio)
+5. Sugiere el algoritmo base
+6. ¿Cómo construirías una métrica de evaluación de negocio?
 
 ### Ejercicio 3: Análisis Crítico
 Lee este escenario:
@@ -573,6 +603,7 @@ Lee este escenario:
 > "Un equipo desarrolló un modelo de clasificación de riesgo crediticio con 92% de accuracy. Lo desplegaron en producción sin más análisis. Tres meses después, descubrieron que el modelo rechazaba el 80% de solicitudes de un grupo demográfico específico."
 
 **Preguntas**:
+
 1. ¿En qué fase(s) de CRISP-DM falló el equipo?
 2. ¿Qué actividades específicas debieron realizar y no hicieron?
 3. ¿Por qué un 92% de accuracy no garantiza un buen modelo?
@@ -586,39 +617,16 @@ En equipos, diseñen un proyecto de minería de datos para uno de estos problema
 - Segmentación de pacientes hospitalarios por riesgo
 
 **Entregables** (siguiendo CRISP-DM):
-1. Documento de objetivos de negocio (1 página)
+
+1. Documento de objetivos de negocio
 2. Plan de adquisición y exploración de datos
 3. Lista de transformaciones de preparación necesarias
-4. Justificación de algoritmos a evaluar
+4. Planteen cuál sería su algoritmo base
 5. Propuesta de métricas de evaluación
 6. Estrategia de despliegue y monitoreo
 
----
 
-## 9. Recursos Adicionales
-
-### Lecturas Recomendadas
-1. **Paper Original CRISP-DM 1.0** - Chapman et al. (2000)
-2. **"Data Mining for Business Analytics"** - Shmueli, Bruce & Patel
-3. **"Building Machine Learning Powered Applications"** - Emmanuel Ameisen
-
-### Herramientas para Cada Fase
-- **Entendimiento del Negocio**: Miro, Lucidchart (diagramas de flujo)
-- **Exploración de Datos**: Pandas, Matplotlib, Seaborn, Plotly
-- **Preparación**: Scikit-learn (preprocessing), Feature-engine
-- **Modelado**: Scikit-learn, XGBoost, LightGBM, TensorFlow
-- **Evaluación**: Scikit-learn metrics, SHAP, LIME
-- **Despliegue**: FastAPI, Flask, Docker, MLflow, Kubernetes
-
-### Datasets para Práctica
-- **Kaggle**: Miles de datasets reales con competencias
-- **UCI Machine Learning Repository**: Clásicos académicos
-- **Data.gov**: Datos gubernamentales abiertos
-- **Datos abiertos de México**: datos.gob.mx
-
----
-
-## 10. Resumen Ejecutivo
+## Resumen Ejecutivo
 
 ### Puntos Clave para Recordar
 
@@ -662,9 +670,5 @@ En los siguientes capítulos, profundizaremos en técnicas específicas de regre
 1. Chapman, P., et al. (2000). CRISP-DM 1.0: Step-by-step data mining guide.
 2. Shearer, C. (2000). The CRISP-DM model: the new blueprint for data mining. Journal of Data Warehousing, 5(4), 13-22.
 3. Wirth, R., & Hipp, J. (2000). CRISP-DM: Towards a standard process model for data mining. Proceedings of the 4th International Conference on the Practical Applications of Knowledge Discovery and Data Mining.
-4. Casos de estudio: Walmart Sales Forecasting, Credit Card Fraud Detection, Bank Customer Segmentation - Documentación de investigación CRISP-DM.
 
 ---
-
-**Fecha de actualización**: Enero 2026
-**Versión del capítulo**: 1.0

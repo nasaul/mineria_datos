@@ -10,9 +10,10 @@ book:
     collapse-level: 1
   chapters:
     - index.qmd
-    - 0_computacion.md
-    - 1_ecosistema.md
-    - 2_crisp.md
+    - 00_computacion.md
+    - 01_ecosistema.md
+    - 02_intro_ml.md
+    - 03_crisp_dm.md
   open-graph: true
 
 bibliography: references.bib

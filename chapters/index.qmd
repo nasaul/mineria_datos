@@ -6,6 +6,7 @@
 Motivación: DM vs. ML vs. IA. El valor económico de los datos. Ética y privacidad.
 
 ### Metodología CRISP-DM
+Introducción al aprendizaje de máquina.
 Ciclo de vida del proyecto. Definición de objetivos de negocio y traducción a objetivos de minería.
 
 ### Comprensión de Datos (EDA)
@@ -61,6 +62,8 @@ K-Means y Jerárquico. Definición de "Personas" y perfiles de clientes. Marketi
 - Proyecto final (30%):
   - Entrega (75%)
   - Exposición (25%)
+
+Canal de [Slack](https://join.slack.com/t/mineradedatosgroup/shared_invite/zt-3nr70lgli-9OyPaeOd08VCmZl5~LshAQ)
 
 Existirá una parte extra a los alumnos que contribuyan al aprendizaje de sus compañeros:
 

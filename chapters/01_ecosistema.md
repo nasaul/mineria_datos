@@ -1,5 +1,8 @@
 # El Ecosistema de Datos
 
+[Quiz](https://docs.google.com/forms/d/e/1FAIpQLScAo2HyiwnueSkSDfpnpB8tNQICcXpqVMA8003irBc0F7mcVw/viewform?usp=dialog)
+
+
 ## Introducción
 
 En un mundo donde cada clic, transacción y decisión genera datos, la capacidad de convertir esa información en valor económico tangible se ha convertido en una ventaja competitiva esencial. Sin embargo, para un **Ingeniero en Negocios**, no basta con dominar algoritmos o programar modelos: el verdadero desafío está en operar en la interfaz entre la **viabilidad técnica** y la **rentabilidad económica**.
