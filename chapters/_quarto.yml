@@ -13,7 +13,7 @@ book:
     - 00_computacion.md
     - 01_ecosistema.md
     - 02_intro_ml.md
-    #- 03_crisp_dm.md
+    - 03_crisp_dm.md
     #- 04_evaluacion_modelos.md
     #- 05_arboles.qmd
     #- 06_bosques.qmd
