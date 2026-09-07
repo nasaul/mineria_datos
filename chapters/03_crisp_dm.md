@@ -176,7 +176,6 @@ Es el núcleo computacional donde se aplican los **algoritmos de machine learnin
    - División de datos:
      - **Conjunto de entrenamiento** (70-80%): Para enseñar al modelo
      - **Conjunto de prueba** (20-30%): Para evaluar rendimiento
-   - **Validación cruzada** (*k-fold*): Estrategia robusta para evitar sobreajuste
 
 3. **Construcción del Modelo**
    - Ajustar un modelo base
@@ -192,7 +191,7 @@ Es el núcleo computacional donde se aplican los **algoritmos de machine learnin
 
 ---
 
-### Evaluación
+### Fase 5: Evaluación
 
 A diferencia de la evaluación técnica dentro del modelado, esta fase revisa el modelo desde la **óptica del negocio**.
 
@@ -274,12 +273,17 @@ Walmart opera más de 10,000 tiendas globalmente y enfrenta el desafío de gesti
 
 **1. Entendimiento del Negocio**
 
-- **Objetivo**: Desarrollar un sistema de pronóstico de ventas semanales por departamento y tienda.
-- **Criterios de éxito**: 
-   - Minimizar el Error Medio Absoluto Ponderado (WMAE), dando mayor peso a semanas festivas.
-   - Generar una función de ganancias por producto en la que consideremos: 
+- **Objetivo**: Optimizar el inventario por producto y tienda.
+
+::: {.callout-tip collapse="true"}
+
+**Criterios de éxito**:
+
+   - Desde el machine learning: Minimizar el Error Medio Absoluto Ponderado (WMAE), dando mayor peso a semanas festivas.
+   - Para el negocio: Generar una función de ganancias por producto en la que consideremos: 
       - Si predijimos menos y no había inventario -> ¿Cuánto perdimos de ganancias por no tener inventario suficiente?
       - Si predijimos que eran más y se vendió menos -> Sumar las ganancias por ventas y restarle los costos de almacenamientos.
+:::
 
 **2. Entendimiento de Datos**
 
