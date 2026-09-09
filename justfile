@@ -33,20 +33,9 @@ clean:
     find . -type d -name ".ipynb_checkpoints" -exec rm -rf {} + 2>/dev/null || true
     find . -type d -name ".ruff_cache" -exec rm -rf {} + 2>/dev/null || true
 
-# Format Python code in notebooks with ruff
+# Format Python code (ruff lee .ipynb de forma nativa, sin nbqa)
 format:
-    uv run nbqa ruff format notebooks/
     uv run ruff format .
-
-# Lint Python code
-lint:
-    uv run nbqa ruff check notebooks/
-    uv run ruff check .
-
-# Fix linting issues automatically
-fix:
-    uv run nbqa ruff check --fix notebooks/
-    uv run ruff check --fix .
 
 # Run pre-commit hooks on all files
 pre-commit:
@@ -96,8 +85,8 @@ clear-outputs:
         uv run jupyter nbconvert --clear-output --inplace "$notebook"
     done
 
-# Full build pipeline: format, lint, render
-build: format lint render
+# Full build pipeline: format, render
+build: format render
 
 # Development setup: install everything and setup hooks
 setup: install-dev pre-commit-install

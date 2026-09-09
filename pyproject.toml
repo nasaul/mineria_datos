@@ -42,18 +42,6 @@ dev = [
 line-length = 88
 target-version = "py313"
 
-[tool.ruff.lint]
-select = [
-    "E",   # pycodestyle errors
-    "W",   # pycodestyle warnings
-    "F",   # pyflakes
-    "I",   # isort
-    "N",   # pep8-naming
-    "UP",  # pyupgrade
-]
-ignore = [
-    "E501",  # line too long (handled by formatter)
-]
 
 [tool.ruff.format]
 quote-style = "double"

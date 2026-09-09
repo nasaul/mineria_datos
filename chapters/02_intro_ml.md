@@ -1,5 +1,7 @@
 # Fundamentos de Machine Learning
 
+[Quiz](https://forms.gle/iqQx7M6nBkju1bTq9)
+
 ## Introducción: El Cambio de Paradigma en la Toma de Decisiones
 
 En el capítulo anterior exploramos cómo la Minería de Datos, el Machine Learning y la Inteligencia Artificial se relacionan dentro del ecosistema de datos. Establecimos que **el Machine Learning es el motor técnico** que permite extraer valor de los datos.
