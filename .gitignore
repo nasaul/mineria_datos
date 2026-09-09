@@ -229,3 +229,7 @@ specs/
 
 # Scratch de orquestación de agentes
 .superpowers/
+scripts/generar_tarea_01.py
+scripts/solucion_tarea_01.csv
+*.DS_Store
+alumnos/*
