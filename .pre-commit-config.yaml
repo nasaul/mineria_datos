@@ -5,14 +5,6 @@ default_language_version:
   python: python3.13
 
 repos:
-  # Solo el formateador de ruff. El linter se quito a proposito: en un repo de
-  # material didactico marcaba como errores las convenciones del curso (`X_train`)
-  # y los imports que los alumnos aun no usan en las plantillas de tarea.
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.8.5
-    hooks:
-      - id: ruff-format
-        types_or: [python, pyi, jupyter]
 
   # Clear notebook outputs before committing
   - repo: https://github.com/kynan/nbstripout
