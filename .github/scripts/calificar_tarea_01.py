@@ -235,7 +235,11 @@ def main():
     restantes = "sin límite (profesor)" if es_profesor else str(max(0, LIMITE_INTENTOS - usados))
 
     # `/validar` es un ensayo: revisa forma, no toca la hoja y no gasta intento.
+    # Sí revela mse_ref y mse_meta: son el piso y el techo de la escala, y saber
+    # dónde está el error irreducible es parte de la lección. No dicen nada de la
+    # estructura, así que no hay nada que copiar.
     if modo == "validar":
+        mse_ref, mse_meta = referencias_de(oraculo, variante)
         termina(
             f"### Formato correcto\n\n"
             f"| | |\n|---|---|\n"
@@ -244,6 +248,8 @@ def main():
             f"| Predicciones | {len(valores)} ✓ |\n"
             f"| Rango | {min(valores):.2f} a {max(valores):.2f} "
             f"(promedio {sum(valores) / len(valores):.2f}) |\n"
+            f"| MSE del baseline lineal (= 5) | {mse_ref:.2f} |\n"
+            f"| MSE meta (= 10) | {mse_meta:.2f} |\n"
             f"| Intentos disponibles | {restantes} |\n"
             f"| Cierre | {limite_txt} |\n\n"
             "Tu entrega tiene la forma correcta y **esta revisión no consumió ningún "
