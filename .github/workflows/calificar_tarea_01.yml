@@ -1,0 +1,62 @@
+name: Calificar Tarea 01
+
+# Se dispara con un comentario en un PR, NO con cada push. Dos comandos:
+#   /validar    revisa el formato de la entrega. No califica y NO consume intento.
+#   /calificar  califica y registra. Consume uno de los dos intentos.
+#
+# Por qué `issue_comment` y no `push`/`pull_request`:
+#   1. Los intentos se gastan a propósito, no por corregir un typo en el notebook.
+#   2. `issue_comment` corre el workflow de `main`, no el de la rama del alumno,
+#      así que nadie puede editar este archivo en su PR para leerse el secret.
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+# Serializa las calificaciones: el conteo de intentos es leer-contar-escribir sobre
+# la hoja, y dos corridas simultáneas podrían asignar el mismo número de intento.
+concurrency:
+  group: calificar-tarea-01
+  cancel-in-progress: false
+
+jobs:
+  calificar:
+    if: >-
+      github.event.issue.pull_request &&
+      (startsWith(github.event.comment.body, '/calificar') ||
+       startsWith(github.event.comment.body, '/validar'))
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout de main (el default en issue_comment), solo para tener el calificador.
+      # El código del PR nunca se descarga ni se ejecuta.
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install --quiet gspread
+
+      - name: Calificar o validar
+        run: python .github/scripts/calificar_tarea_01.py
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          PR_NUMERO: ${{ github.event.issue.number }}
+          COMENTARISTA: ${{ github.event.comment.user.login }}
+          # El cuerpo del comentario lo escribe un alumno: viaja por `env` y no
+          # interpolado en el `run:`, porque `${{ }}` dentro de un shell es
+          # inyección de comandos. El script solo lo compara con startswith.
+          COMENTARIO: ${{ github.event.comment.body }}
+          # Ventana de entregas, en hora de Ciudad de México. Para extender el plazo:
+          #   gh variable set TAREA_01_CIERRE --body 2026-09-27T23:59:59
+          # Si la variable de cierre falta o está mal escrita, NADIE puede entregar
+          # (fail-safe). `TAREA_01_APERTURA` es opcional: vacía = abierta desde ya.
+          TAREA_01_APERTURA: ${{ vars.TAREA_01_APERTURA }}
+          TAREA_01_CIERRE: ${{ vars.TAREA_01_CIERRE }}
+          GSHEETS_SA_JSON: ${{ secrets.GSHEETS_SA_JSON }}
+          GSHEETS_ORACULO_ID: ${{ vars.GSHEETS_ORACULO_ID }}
+          GSHEETS_CALIF_ID: ${{ vars.GSHEETS_CALIF_ID }}

@@ -53,6 +53,12 @@ select = [
 ]
 ignore = [
     "E501",  # line too long (handled by formatter)
+    # `X` para la matriz de diseño (y `X_train`, `A`) es la convención de ML que usa
+    # todo el curso, notebooks incluidos. Renombrarlas a minúsculas haría el código
+    # menos legible para los alumnos, no más.
+    "N802",  # nombre de función no minúscula  (genera_X)
+    "N803",  # nombre de argumento no minúscula (X, X_train)
+    "N806",  # variable no minúscula en función (X_test, A)
 ]
 
 [tool.ruff.format]
