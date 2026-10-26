@@ -1,0 +1,5 @@
+contexto,forma,MSE_CV,DE_pliegues,columnas
+Baseline + un término,cuadrado,83.34285243705598,11.709169672637397,13
+Baseline + un término,exponencial,83.41298150838034,11.917720588390145,13
+Con los demás términos,cuadrado,20.067056101428086,2.600928673625176,18
+Con los demás términos,exponencial,20.74895679389978,2.5821456064044868,18

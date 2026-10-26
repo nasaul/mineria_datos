@@ -1,0 +1,140 @@
+[
+  {
+    "archivo": "01_distribuciones.png",
+    "ancho": 2511,
+    "alto": 1623,
+    "sha256": "2986dbe73453c2b03b9656a748a83dac24d424a65d52b0bbe2d2b6d00e8261cf"
+  },
+  {
+    "archivo": "02_respuesta.png",
+    "ancho": 2511,
+    "alto": 1623,
+    "sha256": "d0a5241a5923d5e139eb5556c9c225deec685d040d766e0c743b8dac1a29c17c"
+  },
+  {
+    "archivo": "03_correlacion.png",
+    "ancho": 1857,
+    "alto": 1803,
+    "sha256": "b67d4979ae462a4dcfb3fcc05941ea20b4d4551f9a3d906a0a28e93d40ade0eb"
+  },
+  {
+    "archivo": "04_residuales_baseline.png",
+    "ancho": 2511,
+    "alto": 1623,
+    "sha256": "9a8dc238c444cc111dbc4bfdf2df4bde16112ecbd5cc3c171f4b027e3ca7b8e9"
+  },
+  {
+    "archivo": "05_residuales_aditivo.png",
+    "ancho": 2511,
+    "alto": 1623,
+    "sha256": "a0293029a3d752261ad660d58adddbf659e418fe04462a3f935a70880dd899c5"
+  },
+  {
+    "archivo": "06_interaccion.png",
+    "ancho": 2691,
+    "alto": 903,
+    "sha256": "ec41ca9310e9100fccd205a874402c494868af26bec0a80c6f6120e72cf994c3"
+  },
+  {
+    "archivo": "07_residuales_validacion.png",
+    "ancho": 2515,
+    "alto": 1623,
+    "sha256": "5187eaab8d0d34189bfce823a52f879708d3594f1fb810f7b3643462c4cfd3a3"
+  },
+  {
+    "archivo": "08_validacion.png",
+    "ancho": 2151,
+    "alto": 1803,
+    "sha256": "a05becd2ffc3248d90b2710d6220cbc537b9c780507042ca46c4d4c4358f9d1c"
+  },
+  {
+    "archivo": "09_comparacion_lasso.png",
+    "ancho": 2331,
+    "alto": 903,
+    "sha256": "ddca7a4f7779580bde92447ecbcf8530ca398c7c45fdc44228638a0ce36bc06b"
+  },
+  {
+    "archivo": "10_progreso_modelos.png",
+    "ancho": 2150,
+    "alto": 1263,
+    "sha256": "0a0f47d8871942103bbd3f6b61f71bc70ed557f93c963cbcf9c41afcfab7c369"
+  },
+  {
+    "archivo": "11_ablacion_terminos.png",
+    "ancho": 2151,
+    "alto": 1083,
+    "sha256": "28160f42ca0df8dfe23ab53ab822e8e8d672b5a917c9a4e9513acb2134b0b7ff"
+  },
+  {
+    "archivo": "12_formas_funcionales.png",
+    "ancho": 2331,
+    "alto": 903,
+    "sha256": "929b15db5f067e801d9d0dd725d7649923b6f2ad51464f68c5ac80e8372af1c5"
+  },
+  {
+    "archivo": "13_alternativas_x6.png",
+    "ancho": 2331,
+    "alto": 903,
+    "sha256": "e8d6192ab4da17575115d2de37bccef7160b8d87db1fa19e92027c8b58f31eb5"
+  },
+  {
+    "archivo": "14_sensibilidad_variables.png",
+    "ancho": 2150,
+    "alto": 903,
+    "sha256": "4558a37cbba5cce5d752371ff910ace0b480d9f54b8c9be609f785912b70c84a"
+  },
+  {
+    "archivo": "15_comparacion_polinomios.png",
+    "ancho": 2148,
+    "alto": 903,
+    "sha256": "1e16adb44138b28ca22902d35011c161a3063067b909ead5e9b7f7359633c0cf"
+  },
+  {
+    "archivo": "hipotesis_exponencial.png",
+    "ancho": 2151,
+    "alto": 903,
+    "sha256": "cc48544f6c81d9c96bfdd0cbf2a2f14afff4fdb0144bc5317fd0c078c6d35ae7"
+  },
+  {
+    "archivo": "residuales_compacto.png",
+    "ancho": 2511,
+    "alto": 1623,
+    "sha256": "24befa9929fb7d4f4f9c46ee786caebed6544cb0e505809c5b9e0e59d2910f97"
+  },
+  {
+    "archivo": "residuales_paso_01.png",
+    "ancho": 2511,
+    "alto": 1623,
+    "sha256": "299f172b2638d1e619efb2a039a9a25931fc68054beea1ac1b70b2f05864278d"
+  },
+  {
+    "archivo": "residuales_paso_02.png",
+    "ancho": 2511,
+    "alto": 1623,
+    "sha256": "750024ca5f645d7bbba4c20261d993caaa9d97389f43bd0098b99f7544428d6b"
+  },
+  {
+    "archivo": "residuales_paso_03.png",
+    "ancho": 2511,
+    "alto": 1623,
+    "sha256": "6291f864b3c37819a7a9b7ca13231d2bb2d6517ff24f733cb5c606f0313d81d3"
+  },
+  {
+    "archivo": "residuales_paso_04.png",
+    "ancho": 2511,
+    "alto": 1623,
+    "sha256": "09443c4929da2b980d81ca7211651ae56f0e84255465295500ac253ebc9ec883"
+  },
+  {
+    "archivo": "residuales_paso_05.png",
+    "ancho": 2511,
+    "alto": 1623,
+    "sha256": "67afa5071f8061597a600c1e023f4d59951a88a5b3a962d39f78bbd690f951c8"
+  },
+  {
+    "archivo": "residuales_paso_06.png",
+    "ancho": 2511,
+    "alto": 1623,
+    "sha256": "8f6fc58aac2255173158bf3e2b30d83675cfd93e3c04cdd6c4739b5c4303c3ad"
+  }
+]

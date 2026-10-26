@@ -1,0 +1,17 @@
+paso,hipotesis,evidencia,cambio,MSE_antes,MSE_despues,origen,decision
+1,x2 tiene curvatura cuadrática,04_residuales_baseline.png → residuales_paso_01.png,+ x2_cuadrado,104.66551268297876,83.34285243705598,IA,Conservar
+2,x4 contiene una oscilación,residuales_paso_01.png → residuales_paso_02.png,+ seno_x4,83.34285243705598,65.90442153961841,IA,Conservar
+3,x6 responde de forma logarítmica,residuales_paso_02.png → residuales_paso_03.png,+ log_x6,65.90442153961841,58.85337469919425,IA,Conservar
+4,x7 requiere un término cúbico,residuales_paso_03.png → residuales_paso_04.png,+ x7_cubo,58.85337469919425,51.020516635650424,IA,Conservar
+5,x9 contiene un cambio de nivel,residuales_paso_04.png → residuales_paso_05.png,+ escalon_x9,51.020516635650424,47.01675917540968,IA,Conservar
+6,La pendiente de x11 depende de x1,06_interaccion.png; interacciones_cv.csv,+ interacción x1*x11,47.01675917540968,20.067056101428086,IA,Conservar
+7,Las columnas crudas sobrantes agregan varianza,residuales_compacto.png; sensibilidad_cv.csv,Compacto: siete columnas,20.067056101428086,19.59499518638491,IA,Conservar
+8,Una exponencial explica mejor x2 que un cuadrado,hipotesis_exponencial.png,x2² → exp(0.5*x2),20.067056101428086,20.74895679389978,IA,Descartar
+9,log1p(x6) mejora log(x6),13_alternativas_x6.png; alternativas_cv.csv,log(x6) → log1p(x6),19.59499518638491,20.450587474859866,IA,Descartar
+10,sqrt(x6) mejora log(x6),13_alternativas_x6.png; alternativas_cv.csv,log(x6) → sqrt(x6),19.59499518638491,21.49332337067474,IA,Descartar
+11,El diccionario polinomial regularizado supera el modelo guiado,09_comparacion_lasso.png,Polinomio grado 3 + LassoCV,19.59499518638491,57.34923663799975,IA,Referencia
+12,Alguna columna del compacto puede retirarse sin perder precisión,11_ablacion_terminos.png; ablacion_cv.csv,Mejor retirada: x11,19.59499518638491,27.507671409116142,IA,Descartar
+13,Otra frecuencia o un coseno sustituye al seno de frecuencia 1,12_formas_funcionales.png; frecuencia_x4_cv.csv,"Mejor alternativa: seno, f=0.5",19.59499518638491,44.829539777671094,IA,Descartar
+14,Agregar columnas crudas justifica aumentar el modelo compacto,14_sensibilidad_variables.png; sensibilidad_cv.csv,Mejor ampliación: x6,19.59499518638491,19.574229482589907,IA,Conservar compacto por simplicidad
+15,Polinomio grado 2 + OLS supera al modelo guiado,15_comparacion_polinomios.png; comparacion_cv.csv,Polinomio grado 2 + OLS,19.59499518638491,71.77178391105448,IA,Descartar
+16,Polinomio grado 3 + OLS supera al modelo guiado,15_comparacion_polinomios.png; comparacion_cv.csv,Polinomio grado 3 + OLS,19.59499518638491,25089.063906942898,IA,Descartar

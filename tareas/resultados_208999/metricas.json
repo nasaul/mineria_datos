@@ -1,0 +1,84 @@
+{
+  "clave": "208999",
+  "variante": "v2e419aae",
+  "estimador": "sklearn.linear_model.LinearRegression",
+  "columnas": [
+    "x11",
+    "x2_cuadrado",
+    "seno_x4",
+    "log_x6",
+    "x7_cubo",
+    "escalon_x9",
+    "interaccion_x1_x11"
+  ],
+  "filas_desarrollo": 600,
+  "filas_validacion": 200,
+  "filas_ajuste_final": 800,
+  "cv_desarrollo": {
+    "baseline": {
+      "MSE_CV": 104.66551268297876,
+      "DE_pliegues": 15.090983818116001,
+      "columnas": 12
+    },
+    "compacto": {
+      "MSE_CV": 19.59499518638491,
+      "DE_pliegues": 2.5837862361907526,
+      "columnas": 7
+    },
+    "lasso": {
+      "MSE_CV": 57.34923663799975,
+      "DE_pliegues": 6.78395871783836,
+      "columnas": 454
+    }
+  },
+  "lasso": {
+    "alpha": 0.525217251966192,
+    "columnas_candidatas": 454,
+    "coeficientes_no_nulos": 34,
+    "MSE_validacion": 58.062041028219454,
+    "iteraciones": 53,
+    "dual_gap": 0.010056485367943726
+  },
+  "seleccion_en_desarrollo": "Compacto",
+  "versiones": {
+    "python": "3.13.15",
+    "numpy": "2.4.1",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.8.0"
+  },
+  "sha256_datos": {
+    "train": "9829ae5d18cb0ef8ec51ab368028325d0822fadad2f5f235ddc042d02ddca859",
+    "test": "6f8eb696993f96724655d007b9b1e189dddb27fc6f380c379e9ca278ac09c536"
+  },
+  "sha256_predicciones": "c081589c200ed7fbd1536fcaba28178b324fca47c6a373c22799ee67faf87bb6",
+  "validacion": [
+    {
+      "modelo": "Baseline",
+      "MSE": 99.66787626127571,
+      "RMSE": 9.983380001846855,
+      "R2": 0.3938431027374575
+    },
+    {
+      "modelo": "Lineal compacto",
+      "MSE": 19.322739753174755,
+      "RMSE": 4.395763841833949,
+      "R2": 0.8824835803193818
+    },
+    {
+      "modelo": "Polinomio grado 3 + LassoCV",
+      "MSE": 58.062041028219454,
+      "RMSE": 7.619845210253254,
+      "R2": 0.6468801387306146
+    }
+  ],
+  "reduccion_mse_validacion": 0.8061287098912302,
+  "intervalo_bootstrap_mse_95": [
+    15.479451156894083,
+    23.745200924753153
+  ],
+  "predicciones": 400,
+  "MSE_meta_oficial": 20.32,
+  "validacion_reutilizada": true,
+  "seleccion_guiada_adaptativa": true,
+  "codigo_notebook_sha256": "69599b0c69e13b04ae62a4ce8896408521577b0431e9ac775008208292d56b57"
+}
