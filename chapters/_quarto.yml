@@ -19,7 +19,7 @@ book:
     - 06_bosques.qmd
     - 07_boosting.qmd
     #- 08_redes_neuronales.qmd
-    #- proyecto_final.md
+    - proyecto_final.md
   open-graph: true
 
 bibliography: references.bib
